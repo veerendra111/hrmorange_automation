@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+
+<suite name="ASO Digital Integration Automation" thread-count="2" parallel="methods">
+    <groups>
+        <run>
+            <include name="smoke"/>
+        </run>
+    </groups>
+    <test name="WebTest">
+
+        <classes>
+            <class name="AdminTest.UserTests">
+                <methods>
+<!--                    <include name="validateUserCreation"/>-->
+                    <exclude name="validateUserCreation"/>
+                </methods>
+            </class>
+            <class name="AdminTest.UserTests" />
+        </classes>
+    </test>
+    <test name="WebTest">
+        <classes>
+            <class name="AdminTest.SIP">
+                <methods>
+                    <!--                    <include name="validateUserCreation"/>-->
+                    <exclude name="validateUserCreation"/>
+                </methods>
+            </class>
+            <class name="AdminTest.UserTests" />
+        </classes>
+    </test>
+</suite>
